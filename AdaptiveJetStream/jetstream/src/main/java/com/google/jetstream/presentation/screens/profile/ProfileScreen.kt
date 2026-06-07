@@ -310,6 +310,7 @@ private fun CompactProfileScreen() {
                             ProfileScreens.About -> AboutSection()
                             ProfileScreens.Subtitles ->
                                 SubtitlesSection(
+                                    isExpanded = false,
                                     isSubtitlesChecked = isSubtitlesChecked,
                                     onSubtitleCheckChange = { isSubtitlesChecked = it }
                                 )
@@ -321,8 +322,13 @@ private fun CompactProfileScreen() {
                                     onSelectedIndexChange = { selectedLanguageIndex = it }
                                 )
 
-                            ProfileScreens.SearchHistory -> SearchHistorySection()
-                            ProfileScreens.HelpAndSupport -> HelpAndSupportSection()
+                            ProfileScreens.SearchHistory -> SearchHistorySection(
+                                isExpanded = false
+                            )
+
+                            ProfileScreens.HelpAndSupport -> HelpAndSupportSection(
+                                isExpanded = false
+                            )
                         }
                     }
                 }
