@@ -316,6 +316,7 @@ private fun CompactProfileScreen() {
 
                             ProfileScreens.Language ->
                                 LanguageSection(
+                                    isExpanded = false,
                                     selectedIndex = selectedLanguageIndex,
                                     onSelectedIndexChange = { selectedLanguageIndex = it }
                                 )
